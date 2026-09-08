@@ -1,0 +1,159 @@
+.footer {
+  background-color: var(--core-navy);
+  color: #fff;
+  padding: 6rem 0 2rem;
+}
+
+.topSection {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.brandCol {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  max-width: 300px;
+}
+
+.logo img {
+  filter: brightness(0) invert(1);
+}
+
+.tagline {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: var(--text-base);
+  line-height: 1.5;
+}
+
+.cta {
+  margin-top: 0.5rem;
+  font-size: var(--text-sm) !important;
+}
+
+.linksGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.linkGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-width: 140px;
+}
+
+.linkGroup h4 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.linkGroup ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.linkGroup a {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: var(--text-sm);
+  transition: color 0.2s ease;
+}
+
+.linkGroup a:hover {
+  color: #fff;
+}
+
+.bottomSection {
+  position: relative;
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.bottomSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, #00d2ff, #3a7bd5, #C00CFF);
+}
+
+.copyright {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: var(--text-sm);
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.socials span {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: var(--text-sm);
+  margin-right: 0.5rem;
+}
+
+.socialIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  transition: all 0.2s ease;
+}
+
+.socialIcon:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.instaImg {
+  filter: grayscale(100%) brightness(200%);
+  transition: filter 0.2s ease;
+}
+
+.socialIcon:hover .instaImg {
+  filter: none;
+}
+
+@media (max-width: 1024px) {
+  .topSection {
+    flex-direction: column;
+  }
+  
+  .linksGrid {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .bottomSection {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .linksGrid {
+    gap: 2rem;
+  }
+}

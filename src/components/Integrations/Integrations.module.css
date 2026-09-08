@@ -1,0 +1,187 @@
+.integrationsSection {
+  padding: 8rem 0;
+  background: linear-gradient(145deg, #4C36CF 0%, #000000 100%);
+  color: #fff;
+  overflow: hidden;
+}
+
+.contentWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.headline {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.subcopy {
+  font-size: var(--text-lg);
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.featureList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.icon {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.featureItem p {
+  font-size: var(--text-base);
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.featureItem strong {
+  color: #fff;
+  opacity: 1;
+}
+
+.visualContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 500px;
+}
+
+/* Orbit Diagram */
+.orbitContainer {
+  position: relative;
+  width: 440px;
+  height: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.centerLogo {
+  width: 120px;
+  height: 120px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
+}
+
+.orbitCircle {
+  position: absolute;
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  animation: rotate linear infinite;
+}
+
+.orbit1 {
+  width: 180px;
+  height: 180px;
+  animation-duration: 15s;
+}
+
+.orbit2 {
+  width: 300px;
+  height: 300px;
+  animation-duration: 25s;
+  animation-direction: reverse;
+}
+
+.orbit3 {
+  width: 440px;
+  height: 440px;
+  animation-duration: 35s;
+}
+
+.satellite {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  /* Reverse rotation to keep icons upright */
+  animation: rotate linear infinite reverse;
+}
+
+.orbit1 .satellite { animation-duration: 15s; }
+.orbit2 .satellite { animation-duration: 25s; animation-direction: normal; }
+.orbit3 .satellite { animation-duration: 35s; }
+
+.pos1 { top: -22px; left: calc(50% - 22px); }
+.pos2 { left: -22px; top: calc(50% - 22px); }
+.pos3 { right: -22px; top: calc(50% - 22px); }
+.pos4 { top: -22px; left: calc(50% - 22px); }
+.pos5 { bottom: -22px; left: calc(50% - 22px); }
+.pos6 { left: -22px; top: calc(50% - 22px); }
+.pos7 { right: -22px; top: calc(50% - 22px); }
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 1024px) {
+  .contentWrapper {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .header {
+    align-items: center;
+  }
+  
+  .featureItem {
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .orbitContainer {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .orbit1 { width: 200px; height: 200px; }
+  .orbit2 { width: 300px; height: 300px; }
+  
+  .centerLogo {
+    width: 100px;
+    height: 100px;
+  }
+  .centerLogo img {
+    width: 70px;
+    height: auto;
+  }
+}
